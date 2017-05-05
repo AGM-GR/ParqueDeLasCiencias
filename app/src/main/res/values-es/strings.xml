@@ -4,6 +4,6 @@
 
     <string name="ok_button">Aceptar</string>
 
-
+    <string name="title_activity_qrscanner">Scanea QR</string>
 
 </resources>

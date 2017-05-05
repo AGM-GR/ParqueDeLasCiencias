@@ -1,8 +1,10 @@
 package rafalex.pdm.ugr.parquedelasciencias;
 
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,20 +31,25 @@ public class QRScanner extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_qrscanner);
 
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.hide();
+        }
+
+        //DETECCION QR
         cameraView = (SurfaceView) findViewById(R.id.camera_view);
 
         //Creamos el lector de qr
-        barcodeDetector =
-                new BarcodeDetector.Builder(getBaseContext())
-                        .setBarcodeFormats(Barcode.QR_CODE)
-                        .build();
+        barcodeDetector = new BarcodeDetector.Builder(this)
+                .setBarcodeFormats(Barcode.QR_CODE)
+                .build();
 
         //Creamos la camara
         cameraSource = new CameraSource
-                .Builder(getBaseContext(), barcodeDetector)
-                .setRequestedPreviewSize(640, 480)
+                .Builder(this, barcodeDetector)
                 .build();
 
         // listener de ciclo de vida de la camara
@@ -88,15 +95,16 @@ public class QRScanner extends AppCompatActivity {
                 final SparseArray<Barcode> barcodes = detections.getDetectedItems();
 
                 if (barcodes.size() != 0) {
-                    String value = barcodes.valueAt(0).displayValue.toString();
-                    Toast.makeText(getApplicationContext(), value, Toast.LENGTH_SHORT).show();
-                }
 
-                barcodeDetector.release();
+                    String value = barcodes.valueAt(0).displayValue.toString();
+
+                    Intent i = new Intent(QRScanner.this, TicketInfo.class);
+                    i.putExtra("QRResult",value);
+                    startActivity(i);
+
+                    barcodeDetector.release();
+                }
             }
         });
-
-
     }
-
 }
