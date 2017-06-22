@@ -1,5 +1,8 @@
 package rafalex.pdm.ugr.parquedelasciencias;
 
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -38,5 +41,8 @@ public class Alarma extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         vib.vibrate(patron,-1);
+        Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
+        r.play();
     }
 }
