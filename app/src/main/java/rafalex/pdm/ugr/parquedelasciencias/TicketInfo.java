@@ -1,5 +1,7 @@
 package rafalex.pdm.ugr.parquedelasciencias;
 
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -33,5 +35,19 @@ public class TicketInfo extends AppCompatActivity {
 
         text.setText("Fecha entrada: " + fecha + " Biodomo: " + biodomo + " Planetario: " + planetario);
     }
+
+    Intent intentoLanzar = new Intent(getBaseContext(), Temporizador.class);
+    PendingIntent pIntent=PendingIntent.getBroadcast(this, 0, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
+
+
+    //Calendar cal = Calendar.getInstance();
+    //cal.setTimeInMillis(System.currentTimeMillis());
+    //cal.set (Calendar.HOUR_OF_DAY, timePicker.getCurrentHour());
+    //cal.set (Calendar.MINUTE, timePicker.getCurrentMinute());
+    //cal.set (Calendar.SECOND, 0);
+
+    //AlarmManager aMan = (AlarmManager)getSystemService(ALARM_SERVICE);
+    //aMan.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pIntent);
+
 
 }
