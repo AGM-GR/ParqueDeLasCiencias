@@ -18,6 +18,6 @@ public class Alarma extends AppCompatActivity {
 
         titulo = (TextView) findViewById(R.id.titulo_alarma);
         hora = (TextView) findViewById(R.id.hora_alarma);
-        aceptar = (Button) findViewById(R.id.aceptar_alarma)
+        aceptar = (Button) findViewById(R.id.aceptar_alarma);
     }
 }
