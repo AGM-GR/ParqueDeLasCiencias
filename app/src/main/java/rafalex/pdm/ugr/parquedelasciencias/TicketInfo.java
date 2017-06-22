@@ -34,6 +34,8 @@ public class TicketInfo extends AppCompatActivity {
         planetario = horarios[2];
 
         text.setText("Fecha entrada: " + fecha + " Biodomo: " + biodomo + " Planetario: " + planetario);
+
+
     }
 
     //Intent intentoLanzar = new Intent(getBaseContext(), Temporizador.class);

@@ -12,8 +12,9 @@ import android.widget.TextView;
 
 public class Alarma extends AppCompatActivity {
 
-    Vibrator vib = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+    Vibrator vib;
     long [] patron = {0, 500, 500, 500, 500};
+    Ringtone ringtone;
 
     TextView titulo;
     TextView hora;
@@ -24,6 +25,8 @@ public class Alarma extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarma);
 
+        vib = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+
         titulo = (TextView) findViewById(R.id.titulo_alarma);
         hora = (TextView) findViewById(R.id.hora_alarma);
         aceptar = (Button) findViewById(R.id.aceptar_alarma);
@@ -32,6 +35,7 @@ public class Alarma extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 vib.cancel();
+                ringtone.stop();
                 finish();
             }
         });
@@ -40,9 +44,16 @@ public class Alarma extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        vib.vibrate(patron,-1);
-        Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-        Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
-        r.play();
+        vib.vibrate(patron,3);
+        Uri alarma = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
+        ringtone = RingtoneManager.getRingtone(getApplicationContext(), alarma);
+        ringtone.play();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        vib.cancel();
+        ringtone.stop();
     }
 }
