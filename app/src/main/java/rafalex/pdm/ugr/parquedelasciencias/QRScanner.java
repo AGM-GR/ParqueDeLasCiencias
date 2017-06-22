@@ -98,11 +98,19 @@ public class QRScanner extends AppCompatActivity {
 
                     String value = barcodes.valueAt(0).displayValue.toString();
 
-                    Intent i = new Intent(QRScanner.this, TicketInfo.class);
-                    i.putExtra("QRResult",value);
-                    startActivity(i);
+                    String[] horarios = value.split("[-]+");
+                    if (horarios.length == 3) {
+                        if (horarios[0].split("[/]+").length == 3
+                                && horarios[1].split("[:]+").length == 2
+                                && horarios[2].split("[:]+").length == 2) {
 
-                    barcodeDetector.release();
+                            Intent i = new Intent(QRScanner.this, TicketInfo.class);
+                            i.putExtra("QRResult", value);
+                            startActivity(i);
+
+                            barcodeDetector.release();
+                        }
+                    }
                 }
             }
         });

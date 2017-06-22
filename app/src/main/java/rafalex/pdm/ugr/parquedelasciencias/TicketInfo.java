@@ -36,8 +36,8 @@ public class TicketInfo extends AppCompatActivity {
         text.setText("Fecha entrada: " + fecha + " Biodomo: " + biodomo + " Planetario: " + planetario);
     }
 
-    Intent intentoLanzar = new Intent(getBaseContext(), Temporizador.class);
-    PendingIntent pIntent=PendingIntent.getBroadcast(this, 0, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
+    //Intent intentoLanzar = new Intent(getBaseContext(), Temporizador.class);
+    //PendingIntent pIntent=PendingIntent.getBroadcast(this, 0, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
 
 
     //Calendar cal = Calendar.getInstance();
