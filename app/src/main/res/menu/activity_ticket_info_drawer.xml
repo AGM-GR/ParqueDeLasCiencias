@@ -5,7 +5,8 @@
         <item
             android:id="@+id/info"
             android:icon="@drawable/ic_info"
-            android:title="Información" />
+            android:title="Información"
+            android:checked="true"/>
         <item
             android:id="@+id/expo"
             android:icon="@drawable/ic_hourglass"
@@ -21,12 +22,12 @@
 
         <item
             android:id="@+id/escanear"
-            android:icon="@drawable/ic_map"
+            android:icon="@drawable/ic_qr"
             android:title="Escanear entrada" />
 
         <item
             android:id="@+id/ayuda"
-            android:icon="@drawable/ic_map"
+            android:icon="@drawable/ic_help"
             android:title="Ayuda" />
     </group>
 
