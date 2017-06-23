@@ -109,6 +109,8 @@ public class QRScanner extends AppCompatActivity {
                             startActivity(i);
 
                             barcodeDetector.release();
+
+                            finish();
                         }
                     }
                 }

@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
             Intent i = new Intent(MainActivity.this, TicketInfo.class);
             i.putExtra("QRResult", codigo_entrada);
             startActivity(i);
+            finish();
         }
 
     }
