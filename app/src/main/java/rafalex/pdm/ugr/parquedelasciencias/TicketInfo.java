@@ -18,6 +18,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.MapFragment;
+
 public class TicketInfo extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -96,7 +98,7 @@ public class TicketInfo extends AppCompatActivity
         android.app.FragmentManager fragmentManager = getFragmentManager();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+           fragmentManager.beginTransaction().replace(R.id.mapa, new MapFragment()).commit();
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
