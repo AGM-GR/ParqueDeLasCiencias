@@ -100,11 +100,11 @@ public class TicketInfo extends AppCompatActivity
         if (id == R.id.nav_camera) {
            fragmentManager.beginTransaction().replace(R.id.contenedor, new MapaFragment()).commit();
         } else if (id == R.id.nav_gallery) {
-
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new ExposicionesTemporalesFragment()).commit();
         } else if (id == R.id.nav_slideshow) {
-
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new HorariosFragment()).commit();
         } else if (id == R.id.nav_manage) {
-
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new InformacionGeneralFragment()).commit();
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
@@ -125,7 +125,7 @@ public class TicketInfo extends AppCompatActivity
         fecha = horarios[0];
         biodomo = horarios[1];
         planetario = horarios[2];
-        text.setText(R.string.fecha_entrada + ": " + fecha + " Biodomo: " + biodomo + " " + R.string.planetario + ": " + planetario);
+        //text.setText(R.string.fecha_entrada + ": " + fecha + " Biodomo: " + biodomo + " " + R.string.planetario + ": " + planetario);
 
         //Guarda la entrada escaneada
         SharedPreferences.Editor entrada_escaneada = getSharedPreferences("Entrada", Context.MODE_PRIVATE).edit();
