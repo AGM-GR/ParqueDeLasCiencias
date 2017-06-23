@@ -4,6 +4,11 @@
 
     <string name="ok_button">Aceptar</string>
 
-    <string name="title_activity_qrscanner">Scanea QR</string>
+    <string name="title_activity_qrscanner">Scanear QR</string>
+
+    <string name="permisos_camara">Se necesita acceso a la camara</string>
+
+    <string name="planetario">Planetario</string>
+    <string name="fecha_entrada">Fecha entrada</string>
 
 </resources>

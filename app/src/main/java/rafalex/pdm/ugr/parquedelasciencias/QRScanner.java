@@ -67,7 +67,7 @@ public class QRScanner extends AppCompatActivity {
                 } else {
                     if (Build.VERSION.SDK_INT > 22) {
                         if (shouldShowRequestPermissionRationale(android.Manifest.permission.CAMERA))
-                            Toast.makeText(getApplicationContext(), "Se necesita acceso a la camara", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), R.string.permisos_camara, Toast.LENGTH_SHORT).show();
                         requestPermissions(new String[]{android.Manifest.permission.CAMERA}, MY_PERMISSIONS_REQUEST_CAMERA);
                     }
                 }

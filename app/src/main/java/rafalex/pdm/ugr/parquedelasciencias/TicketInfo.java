@@ -33,7 +33,7 @@ public class TicketInfo extends AppCompatActivity {
         biodomo = horarios[1];
         planetario = horarios[2];
 
-        text.setText("Fecha entrada: " + fecha + " Biodomo: " + biodomo + " Planetario: " + planetario);
+        text.setText(R.string.fecha_entrada + ": " + fecha + " Biodomo: " + biodomo + R.string.planetario + ": " + planetario);
     }
 
     //Intent intentoLanzar = new Intent(getBaseContext(), Temporizador.class);

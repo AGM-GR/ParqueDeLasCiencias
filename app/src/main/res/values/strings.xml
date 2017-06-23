@@ -6,5 +6,9 @@
 
     <string name="title_activity_qrscanner">Scan QR</string>
 
+    <string name="permisos_camara">Camera access is required</string>
+
+    <string name="planetario">Planetarium</string>
+    <string name="fecha_entrada">Entry date</string>
 
 </resources>
