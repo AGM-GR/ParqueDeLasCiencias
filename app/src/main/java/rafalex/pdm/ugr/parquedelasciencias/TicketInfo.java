@@ -95,10 +95,10 @@ public class TicketInfo extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        android.app.FragmentManager fragmentManager = getFragmentManager();
+        FragmentManager fragmentManager = getSupportFragmentManager();
 
         if (id == R.id.nav_camera) {
-           fragmentManager.beginTransaction().replace(R.id.mapa, new MapFragment()).commit();
+           fragmentManager.beginTransaction().replace(R.id.contenedor, new MapaFragment()).commit();
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {

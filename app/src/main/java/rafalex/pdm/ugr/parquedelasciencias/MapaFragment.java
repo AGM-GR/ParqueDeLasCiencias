@@ -8,15 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link MapaFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link MapaFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class MapaFragment extends Fragment {
 
     @Override
@@ -25,7 +16,5 @@ public class MapaFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_mapa, container, false);
     }
-
-
 
 }
