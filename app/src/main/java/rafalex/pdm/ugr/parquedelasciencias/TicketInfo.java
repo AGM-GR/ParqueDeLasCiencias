@@ -97,19 +97,14 @@ public class TicketInfo extends AppCompatActivity
 
         FragmentManager fragmentManager = getSupportFragmentManager();
 
-        if (id == R.id.nav_camera) {
-           fragmentManager.beginTransaction().replace(R.id.contenedor, new MapaFragment()).commit();
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.info) {
+           fragmentManager.beginTransaction().replace(R.id.contenedor, new InformacionGeneralFragment()).commit();
+        } else if (id == R.id.expo) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new ExposicionesTemporalesFragment()).commit();
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.horarios) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new HorariosFragment()).commit();
-        } else if (id == R.id.nav_manage) {
-            fragmentManager.beginTransaction().replace(R.id.contenedor, new InformacionGeneralFragment()).commit();
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
-        }
+        } else if (id == R.id.mapa) {
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new MapaFragment()).commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -126,6 +121,9 @@ public class TicketInfo extends AppCompatActivity
         biodomo = horarios[1];
         planetario = horarios[2];
         //text.setText(R.string.fecha_entrada + ": " + fecha + " Biodomo: " + biodomo + " " + R.string.planetario + ": " + planetario);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.contenedor, new InformacionGeneralFragment()).commit();
 
         //Guarda la entrada escaneada
         SharedPreferences.Editor entrada_escaneada = getSharedPreferences("Entrada", Context.MODE_PRIVATE).edit();
