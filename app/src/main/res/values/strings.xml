@@ -10,5 +10,11 @@
 
     <string name="planetario">Planetarium</string>
     <string name="fecha_entrada">Entry date</string>
+    <string name="title_activity_ticket_info">TicketInfo</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 
 </resources>
