@@ -127,6 +127,8 @@ public class TicketInfo extends AppCompatActivity
     }
 
     //Intent intentoLanzar = new Intent(getBaseContext(), Temporizador.class); 
+    // intentoLanzar.putExtra("Titulo", "Biodomo");
+    // intentoLanzar.putExtra("Hora", "10:20");
     // PendingIntent pIntent=PendingIntent.getBroadcast(this, 0, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);   
     // Calendar cal = Calendar.getInstance(); 
     // cal.setTimeInMillis(System.currentTimeMillis()); 

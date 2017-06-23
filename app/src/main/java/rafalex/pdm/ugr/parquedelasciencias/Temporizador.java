@@ -11,10 +11,13 @@ public class Temporizador extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent)  {
-        Intent actividadALanzar = new Intent(context, Alarma.class);
 
-        actividadALanzar.putExtra("titulo",titulo);
-        actividadALanzar.putExtra("hora",hora);
+        titulo = intent.getStringExtra("Titulo");
+        hora = intent.getStringExtra("Hora");
+
+        Intent actividadALanzar = new Intent(context, Alarma.class);
+        actividadALanzar.putExtra("Titulo",titulo);
+        actividadALanzar.putExtra("Hora",hora);
 
         context.startActivity(actividadALanzar);
     }

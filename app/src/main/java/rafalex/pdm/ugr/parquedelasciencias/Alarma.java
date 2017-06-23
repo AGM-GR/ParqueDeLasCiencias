@@ -44,6 +44,10 @@ public class Alarma extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
+        titulo.setText(getIntent().getExtras().getString("Titulo"));
+        hora.setText(getIntent().getExtras().getString("Hora"));
+
         vib.vibrate(patron,3);
         Uri alarma = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
         ringtone = RingtoneManager.getRingtone(getApplicationContext(), alarma);
