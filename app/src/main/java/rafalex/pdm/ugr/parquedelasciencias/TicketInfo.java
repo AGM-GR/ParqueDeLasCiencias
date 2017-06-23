@@ -1,24 +1,21 @@
 package rafalex.pdm.ugr.parquedelasciencias;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
-
-import com.google.android.gms.maps.MapFragment;
 
 public class TicketInfo extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -28,6 +25,9 @@ public class TicketInfo extends AppCompatActivity
     String fecha;
     String biodomo;
     String planetario;
+
+    private AlertDialog menuDialog;
+    private AlertDialog.Builder helpDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +46,17 @@ public class TicketInfo extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         text = (TextView) findViewById(R.id.qrText);
+
+        //Crea los dialogos
+        LayoutInflater inflater = this.getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.help_dialog, null);
+
+        helpDialog = new AlertDialog.Builder(this, R.style.DialogTheme)
+                .setView(dialogView)
+                .setTitle(R.string.menu_help)
+                .setNeutralButton(R.string.ok_button,null);
+
+        menuDialog = helpDialog.create();
     }
 
     @Override
@@ -56,28 +67,6 @@ public class TicketInfo extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.ticket_info, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -107,7 +96,9 @@ public class TicketInfo extends AppCompatActivity
             startActivity(i);
 
         } else if (id == R.id.ayuda) {
-            fragmentManager.beginTransaction().replace(R.id.contenedor, new MapaFragment()).commit();
+
+            menuDialog.show();
+            return true;
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

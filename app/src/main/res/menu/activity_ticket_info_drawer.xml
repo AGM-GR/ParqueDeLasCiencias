@@ -24,11 +24,11 @@
             android:id="@+id/escanear"
             android:icon="@drawable/ic_qr"
             android:title="Escanear entrada" />
-
-        <item
-            android:id="@+id/ayuda"
-            android:icon="@drawable/ic_help"
-            android:title="Ayuda" />
     </group>
+
+    <item
+        android:id="@+id/ayuda"
+        android:icon="@drawable/ic_help"
+        android:title="Ayuda" />
 
 </menu>
