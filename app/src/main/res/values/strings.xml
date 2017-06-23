@@ -11,14 +11,13 @@
     <string name="planetario">Planetarium</string>
     <string name="fecha_entrada">Entry date</string>
 
-    <string name="title_activity_ticket_info">TicketInfo</string>
+    <string name="ayuda">Application intended to improve the experience offered by the Parque de las Ciencias Here you can scan your
+                         entry, view maps of the park, schedule of activities, temporary activities offered by the park and activate
+                         alarms that will warn you that the time of entry to the planetarium or biodomo.</string>
+
+    <string name="title_activity_ticket_info">Parque de las Ciencias</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
-    <string name="action_settings">Settings</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

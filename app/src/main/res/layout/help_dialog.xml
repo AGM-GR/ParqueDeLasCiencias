@@ -11,7 +11,7 @@
         android:padding="20dp">
 
         <TextView
-            android:text="AIUDA"
+            android:text="@string/ayuda"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/helpView1" />

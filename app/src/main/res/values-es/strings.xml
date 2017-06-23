@@ -11,4 +11,13 @@
     <string name="planetario">Planetario</string>
     <string name="fecha_entrada">Fecha entrada</string>
 
+    <string name="ayuda">Aplicación destinada para mejorar la experiencia que ofrece el Parque de las Ciencias. Aquí podrás escanear tu entrada,
+                         ver mapas del parque, horario de las actividades, actividades temporales que ofrece el parque y activar alarmas que te
+                         avisarán de que se aproxima la hora de entrada al planetario o biodomo.</string>
+
+    <string name="title_activity_ticket_info">Parque de las Ciencias</string>
+
+    <string name="navigation_drawer_open">Abrir cajón de navegación</string>
+    <string name="navigation_drawer_close">Cerrar cajón de navegación</string>
+
 </resources>
