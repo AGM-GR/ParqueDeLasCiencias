@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="rafalex.pdm.ugr.parquedelasciencias.TicketInfo"
-    tools:showIn="@layout/app_bar_ticket_info">
+    tools:showIn="@layout/app_bar_ticket_info"
+    android:id="@+id/contenedor">
 
     <TextView
         android:layout_width="wrap_content"
