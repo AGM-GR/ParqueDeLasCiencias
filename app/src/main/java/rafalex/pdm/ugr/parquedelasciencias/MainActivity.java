@@ -1,7 +1,9 @@
 package rafalex.pdm.ugr.parquedelasciencias;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.support.v4.content.ContextCompat;
@@ -61,6 +63,20 @@ public class MainActivity extends AppCompatActivity {
         menuDialog = helpDialog.create();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        //Comprueba si ya hay una entrada escaneada
+        SharedPreferences entrada_escaneada = getSharedPreferences("Entrada", Context.MODE_PRIVATE);
+        String codigo_entrada = entrada_escaneada.getString("codigo", "");
+        if (!codigo_entrada.equals("")) {
+            Intent i = new Intent(MainActivity.this, TicketInfo.class);
+            i.putExtra("QRResult", codigo_entrada);
+            startActivity(i);
+        }
+
+    }
 
     //Función onCreateOptionMenu, para añadir el estilo de nuestro action_bar
     @Override

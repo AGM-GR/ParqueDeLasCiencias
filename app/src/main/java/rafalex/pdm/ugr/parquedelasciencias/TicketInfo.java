@@ -1,5 +1,8 @@
 package rafalex.pdm.ugr.parquedelasciencias;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -117,7 +120,11 @@ public class TicketInfo extends AppCompatActivity
         fecha = horarios[0];
         biodomo = horarios[1];
         planetario = horarios[2];
-        text.setText(R.string.fecha_entrada + ": " + fecha + " Biodomo: " + biodomo + R.string.planetario + ": " + planetario);
+        text.setText(R.string.fecha_entrada + ": " + fecha + " Biodomo: " + biodomo + " " + R.string.planetario + ": " + planetario);
+
+        //Guarda la entrada escaneada
+        SharedPreferences.Editor entrada_escaneada = getSharedPreferences("Entrada", Context.MODE_PRIVATE).edit();
+        entrada_escaneada.putString("codigo", qrString);
     }
 
     //Intent intentoLanzar = new Intent(getBaseContext(), Temporizador.class); 
