@@ -128,6 +128,7 @@ public class TicketInfo extends AppCompatActivity
         //Guarda la entrada escaneada
         SharedPreferences.Editor entrada_escaneada = getSharedPreferences("Entrada", Context.MODE_PRIVATE).edit();
         entrada_escaneada.putString("codigo", qrString);
+        entrada_escaneada.commit();
     }
 
     //Intent intentoLanzar = new Intent(getBaseContext(), Temporizador.class); 
