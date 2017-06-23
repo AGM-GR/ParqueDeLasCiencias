@@ -18,6 +18,16 @@
             android:id="@+id/mapa"
             android:icon="@drawable/ic_map"
             android:title="Mapas" />
+
+        <item
+            android:id="@+id/escanear"
+            android:icon="@drawable/ic_map"
+            android:title="Escanear entrada" />
+
+        <item
+            android:id="@+id/ayuda"
+            android:icon="@drawable/ic_map"
+            android:title="Ayuda" />
     </group>
 
 </menu>

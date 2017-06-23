@@ -105,6 +105,10 @@ public class TicketInfo extends AppCompatActivity
             fragmentManager.beginTransaction().replace(R.id.contenedor, new HorariosFragment()).commit();
         } else if (id == R.id.mapa) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new MapaFragment()).commit();
+        } else if (id == R.id.escanear) {
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new MapaFragment()).commit();
+        } else if (id == R.id.ayuda) {
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new MapaFragment()).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
