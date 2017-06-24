@@ -132,16 +132,4 @@ public class TicketInfo extends AppCompatActivity
         entrada_escaneada.commit();
     }
 
-    /*Intent intentoLanzar = new Intent(getBaseContext(), Temporizador.class);
-    intentoLanzar.putExtra("Titulo", "Biodomo");
-    intentoLanzar.putExtra("Hora", "10:20");
-    PendingIntent pIntent = PendingIntent.getBroadcast(getBaseContext(), 0, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
-    Calendar cal = Calendar.getInstance();
-    cal.setTimeInMillis(System.currentTimeMillis());
-    TimePicker timePicker = new TimePicker();
-    cal.set(Calendar.HOUR_OF_DAY, timePicker.getCurrentHour());
-    cal.set(Calendar.MINUTE, timePicker.getCurrentMinute());
-    cal.set(Calendar.SECOND, 0);
-    AlarmManager aMan = (AlarmManager)getSystemService(ALARM_SERVICE);
-    aMan.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pIntent);*/
 }

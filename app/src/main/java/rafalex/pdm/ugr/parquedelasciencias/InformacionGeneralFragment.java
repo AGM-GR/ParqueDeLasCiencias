@@ -23,27 +23,26 @@ public class InformacionGeneralFragment extends Fragment {
         View informacionGeneral = inflater.inflate(R.layout.fragment_informacion_general, container, false);
 
         Button boton =  ((Button)informacionGeneral.findViewById(R.id.botonAlarma));
-        boton.setText("ALA");
 
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                ((Button)v).setText("Mierda");
-
-                Intent intentoLanzar = new Intent(getContext(), Temporizador.class);
+                Intent intentoLanzar = new Intent(getActivity(), Temporizador.class);
                 intentoLanzar.putExtra("Titulo", "Biodomo");
                 intentoLanzar.putExtra("Hora", "10:20");
-                PendingIntent pIntent = PendingIntent.getBroadcast(getContext(), 0, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
+                PendingIntent pIntent = PendingIntent.getBroadcast(getActivity(), 0, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
                 Calendar cal = Calendar.getInstance();
-                cal.setTimeInMillis(System.currentTimeMillis()+1000);
+                cal.setTimeInMillis(System.currentTimeMillis()+4000);
                 ((Button)v).setText("Hora: " + cal.getTime());
                 /*TimePicker timePicker = new TimePicker();
                 cal.set(Calendar.HOUR_OF_DAY, timePicker.getCurrentHour());
                 cal.set(Calendar.MINUTE, timePicker.getCurrentMinute());
                 cal.set(Calendar.SECOND, 0);*/
-                AlarmManager aMan = (AlarmManager)getContext().getSystemService(getContext().ALARM_SERVICE);
-                aMan.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pIntent);
+                AlarmManager aMan = (AlarmManager)getActivity().getSystemService(getActivity().ALARM_SERVICE);
+                aMan.setExact(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pIntent);
+
+                //aMan.cancel(pIntent);
             }
         });
 
