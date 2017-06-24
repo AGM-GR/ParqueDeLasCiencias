@@ -21,4 +21,18 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <string name="mar">Sea watchers</string>
+    <string name="marte">The Martian puzzle</string>
+    <string name="vida">The life inside the wine</string>
+    <string name="robots">Robots. The humans an the machines</string>
+    <string name="wow">WOW. Wonders of the wild</string>
+    <string name="celula_madre">Mother cells. Scientific news point</string>
+
+    <string name="mar_des">The exhibition "Sea watchers. Your vision is change" aims to show the importance of bringing together all the eyes of citizens to build, together, new knowledge and influence local and global decisions around the marine environment. The sample reflects the contribution of the public to marine research in the last 5 years and makes a tour of the project operation, objectives and results.</string>
+    <string name="marte_des">The Martian puzzle is a trip to Mars told through impossible postcards, right on the border between science and imagination.</string>
+    <string name="vida_des">The Window to Science is a transparent space open to the present day of science and technology, a way to show society real research and innovation work, as well as the activity developed in the R and D and I system. A direct window on knowledge led by its protagonists.</string>
+    <string name="robots_des">It is an international co-production between the Federal Ministry of Industry and Labor of Germany (DASA) and the Science Park, which tackles a huge and current topic with great implications in fields ranging from daily life to World economy, industry, research, transport or health.</string>
+    <string name="wow_des">WOW offers an original vision of animal life with panoramic scenes of great beauty, loaded at the same time with drama and harmony, as if we had frozen the real life. Knowing these wonders must help us to promote their conservation in the increasingly threatened nature.</string>
+    <string name="celula_madre_des">The great therapeutic hope of the 21st century. This has been the letter of introduction of stem cells, since in 1974 a group of scientists discovered hematopoietic stem cells in the umbilical cord. Their ability to divide indefinitely without losing their properties and to produce specialized cells have made them one of the main axes of current biomedical research and a scientific field of great interest to society.</string>
+
 </resources>

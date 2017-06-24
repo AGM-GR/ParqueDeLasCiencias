@@ -10,8 +10,9 @@
 
     <string name="planetario">Planetario</string>
     <string name="fecha_entrada">Fecha entrada</string>
+    <string name="biodomo">Biodomo</string>
 
-    <string name="ayuda">Aplicación destinada para mejorar la experiencia que ofrece el Parque de las Ciencias. Aquí podrás escanear tu entrada,
+    <string name="ayuda">Aplicación destinada a mejorar la experiencia que ofrece el Parque de las Ciencias. Aquí podrás escanear tu entrada,
                          ver mapas del parque, horario de las actividades, actividades temporales que ofrece el parque y activar alarmas que te
                          avisarán de que se aproxima la hora de entrada al planetario o biodomo.</string>
 
@@ -19,5 +20,19 @@
 
     <string name="navigation_drawer_open">Abrir cajón de navegación</string>
     <string name="navigation_drawer_close">Cerrar cajón de navegación</string>
+    
+    <string name="mar">Observadores del Mar</string>
+    <string name="marte">El puzzle de Marte</string>
+    <string name="vida">La vida dentro del vino</string>
+    <string name="robots">Robots. Los humanos y las máquinas</string>
+    <string name="wow">WOW. Maravillas de la vida salvaje</string>
+    <string name="celula_madre">Células Madre. Punto de actualidad científica</string>
+
+    <string name="mar_des">La exposición "Observadores del Mar. Tu mirada es el cambio" pretende mostrar la importancia de reunir todas las miradas de los ciudadanos para construir, juntos, nuevo conocimiento e influir en las decisiones locales y globales en torno al medio marino. La muestra refleja la contribución del público a la investigación marina en los últimos 5 años y hace un recorrido por el funcionamiento del proyecto, los objetivos y los resultados.</string>
+    <string name="marte_des">El puzzle de Marte es un viaje a Marte contado a través de unas postales imposibles, justo en el límite entre la ciencia y la imaginación.</string>
+    <string name="vida_des">La Ventana a la ciencia es un espacio transparente abierto a la actualidad de la ciencia y la tecnología, una forma de mostrar a la sociedad trabajos reales de investigación e innovación, así como la actividad desarrollada en el sistema de I+D+i. Una ventana directa al conocimiento liderada por sus protagonistas.</string>
+    <string name="robots_des">Se trata de una coproducción internacional entre el Museo federal de la Industria y el Trabajo de Alemania (DASA) y el Parque de las Ciencias, que aborda un tema de enorme calado y actualidad con grandes implicaciones en campos que van desde la vida cotidiana a la economía mundial, la industria, la investigación, el transporte o la salud.</string>
+    <string name="wow_des">WOW ofrece una visión original de la vida animal con escenas panorámicas de gran belleza, cargadas al mismo tiempo de dramatismo y armonía, como si hubiéramos congelado la vida real. Conocer estas maravillas debe ayudarnos a impulsar su conservación en la naturaleza cada vez más amenazada.</string>
+    <string name="celula_madre_des">La gran esperanza terapéutica del siglo XXI. Esta ha sido la carta de presentación en sociedad de las células madre, desde que en 1974 un grupo de científicos descubrieran células madre hematopoyéticas en el cordón umbilical. Su capacidad para dividirse indefinidamente sin perder sus propiedades y llegar a producir células especializadas las han convertido en uno de los principales ejes de la investigación biomédica actual y en un campo científico de gran interés para la sociedad.</string>
 
 </resources>
