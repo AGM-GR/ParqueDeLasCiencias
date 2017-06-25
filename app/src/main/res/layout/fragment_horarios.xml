@@ -13,6 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
+            android:gravity="center_vertical"
             android:padding="20dp"
             android:layout_margin="20dp">
 
@@ -45,6 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
+            android:gravity="center_vertical"
             android:padding="20dp"
             android:layout_margin="20dp">
 
@@ -78,10 +80,11 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/biodome_layout"
+            android:id="@+id/biodomo_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
+            android:gravity="center_vertical"
             android:padding="20dp"
             android:layout_margin="20dp">
 
@@ -115,9 +118,11 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/torre_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
+            android:gravity="center_vertical"
             android:padding="20dp"
             android:layout_margin="20dp">
 
@@ -161,9 +166,11 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/aves_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
+            android:gravity="center_vertical"
             android:padding="20dp"
             android:layout_margin="20dp">
 
@@ -207,9 +214,11 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/mariposario_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
+            android:gravity="center_vertical"
             android:padding="20dp"
             android:layout_margin="20dp">
 

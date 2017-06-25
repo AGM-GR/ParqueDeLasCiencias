@@ -1,8 +1,6 @@
 package rafalex.pdm.ugr.parquedelasciencias;
 
-import android.app.AlarmManager;
 import android.app.AlertDialog;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -17,20 +15,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
-import android.widget.TimePicker;
-
-import java.util.Calendar;
 
 public class TicketInfo extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     TextView text;
-    String qrString;
-    String fecha;
-    String biodomo;
-    String planetario;
 
     private AlertDialog menuDialog;
     private AlertDialog.Builder helpDialog;
@@ -115,13 +105,6 @@ public class TicketInfo extends AppCompatActivity
     @Override
     protected void onResume(){
         super.onResume();
-
-        qrString = getIntent().getExtras().getString("QRResult");
-
-        //Guarda la entrada escaneada
-        SharedPreferences.Editor entrada_escaneada = getSharedPreferences("Entrada", Context.MODE_PRIVATE).edit();
-        entrada_escaneada.putString("codigo", qrString);
-        entrada_escaneada.commit();
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.contenedor, new InformacionGeneralFragment()).commit();

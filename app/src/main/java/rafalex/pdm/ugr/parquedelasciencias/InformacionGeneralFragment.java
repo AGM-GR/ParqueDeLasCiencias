@@ -24,10 +24,10 @@ public class InformacionGeneralFragment extends Fragment {
     TextView estadoEntrada;
     LinearLayout layoutPlanetario;
     TextView horaPlanetario;
-    ImageView alarmaPlanetario;
+    ImageView imagenAlarmaPlanetario;
     LinearLayout layoutBiodomo;
     TextView horaBiodomo;
-    ImageView alarmaBiodomo;
+    ImageView imagenAlarmaBiodomo;
 
 
     @Override
@@ -38,6 +38,8 @@ public class InformacionGeneralFragment extends Fragment {
 
         SharedPreferences entrada_escaneada = getContext().getSharedPreferences("Entrada", Context.MODE_PRIVATE);
         String qrString = entrada_escaneada.getString("codigo", "");
+        boolean alarmaBiodomo = entrada_escaneada.getBoolean("biodomo", false);
+        boolean alarmaPlanetario = entrada_escaneada.getBoolean("planetario", false);
 
         String[] horarios = qrString.split("[-]+");
         String fecha = horarios[0];
@@ -48,10 +50,10 @@ public class InformacionGeneralFragment extends Fragment {
         estadoEntrada = (TextView)informacionGeneral.findViewById(R.id.estado_entrada);
         layoutPlanetario = (LinearLayout) informacionGeneral.findViewById(R.id.planetario_layout);
         horaPlanetario = (TextView)informacionGeneral.findViewById(R.id.hora_planetario);
-        alarmaPlanetario = (ImageView) informacionGeneral.findViewById(R.id.alarma_planetario);
+        imagenAlarmaPlanetario = (ImageView) informacionGeneral.findViewById(R.id.alarma_planetario);
         layoutBiodomo = (LinearLayout) informacionGeneral.findViewById(R.id.biodome_layout);
         horaBiodomo = (TextView)informacionGeneral.findViewById(R.id.hora_biodomo);
-        alarmaBiodomo = (ImageView) informacionGeneral.findViewById(R.id.alarma_biodomo);
+        imagenAlarmaBiodomo = (ImageView) informacionGeneral.findViewById(R.id.alarma_biodomo);
 
         fechaEntrada.setText(fecha);
         if (!planetario.contains("_")) {
@@ -64,6 +66,17 @@ public class InformacionGeneralFragment extends Fragment {
             horaBiodomo.setText(biodomo);
         } else
             layoutBiodomo.setVisibility(View.INVISIBLE);
+
+        if (alarmaBiodomo)
+            imagenAlarmaBiodomo.setImageResource(R.drawable.ic_alarm);
+        else
+            imagenAlarmaBiodomo.setImageResource(R.drawable.ic_alarm_off);
+
+        if (alarmaPlanetario)
+            imagenAlarmaPlanetario.setImageResource(R.drawable.ic_alarm);
+        else
+            imagenAlarmaPlanetario.setImageResource(R.drawable.ic_alarm_off);
+
 
 
 

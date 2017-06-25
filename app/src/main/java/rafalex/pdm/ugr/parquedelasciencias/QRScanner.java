@@ -1,6 +1,8 @@
 package rafalex.pdm.ugr.parquedelasciencias;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.support.v4.content.ContextCompat;
@@ -104,12 +106,20 @@ public class QRScanner extends AppCompatActivity {
                                 && horarios[1].split("[:]+").length == 2
                                 && horarios[2].split("[:]+").length == 2) {
 
+                            //Guarda la entrada escaneada
+                            SharedPreferences.Editor entrada_escaneada = getSharedPreferences("Entrada", Context.MODE_PRIVATE).edit();
+                            entrada_escaneada.putString("codigo", value);
+                            entrada_escaneada.commit();
+
+                            //Lanza la actividad limpiando las anteriores
                             Intent i = new Intent(QRScanner.this, TicketInfo.class);
-                            i.putExtra("QRResult", value);
+                            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(i);
 
+                            //Cierra el detector de códigos
                             barcodeDetector.release();
 
+                            //Finaliza la actividad
                             finish();
                         }
                     }
