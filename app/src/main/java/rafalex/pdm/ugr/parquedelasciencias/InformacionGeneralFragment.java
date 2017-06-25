@@ -34,17 +34,19 @@ public class InformacionGeneralFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View informacionGeneral = inflater.inflate(R.layout.fragment_informacion_general, container, false);
-
+        //Obtiene los datos guardados
         SharedPreferences entrada_escaneada = getContext().getSharedPreferences("Entrada", Context.MODE_PRIVATE);
         String qrString = entrada_escaneada.getString("codigo", "");
-        boolean alarmaBiodomo = entrada_escaneada.getBoolean("biodomo", false);
-        boolean alarmaPlanetario = entrada_escaneada.getBoolean("planetario", false);
+        boolean alarmaBiodomo = entrada_escaneada.getBoolean("alarma_biodomo", false);
+        boolean alarmaPlanetario = entrada_escaneada.getBoolean("alarma_planetario", false);
 
         String[] horarios = qrString.split("[-]+");
         String fecha = horarios[0];
         String biodomo = horarios[1];
         String planetario = horarios[2];
+
+        // Inflate the layout for this fragment
+        View informacionGeneral = inflater.inflate(R.layout.fragment_informacion_general, container, false);
 
         fechaEntrada = (TextView)informacionGeneral.findViewById(R.id.fecha_entrada);
         estadoEntrada = (TextView)informacionGeneral.findViewById(R.id.estado_entrada);
@@ -55,6 +57,7 @@ public class InformacionGeneralFragment extends Fragment {
         horaBiodomo = (TextView)informacionGeneral.findViewById(R.id.hora_biodomo);
         imagenAlarmaBiodomo = (ImageView) informacionGeneral.findViewById(R.id.alarma_biodomo);
 
+        //Muestra las vistas dependiendo de si están disponibles
         fechaEntrada.setText(fecha);
         if (!planetario.contains("_")) {
             layoutPlanetario.setVisibility(View.VISIBLE);
@@ -67,6 +70,7 @@ public class InformacionGeneralFragment extends Fragment {
         } else
             layoutBiodomo.setVisibility(View.INVISIBLE);
 
+        //Establece el icono de alarma
         if (alarmaBiodomo)
             imagenAlarmaBiodomo.setImageResource(R.drawable.ic_alarm);
         else

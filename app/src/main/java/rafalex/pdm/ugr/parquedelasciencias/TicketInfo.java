@@ -82,17 +82,11 @@ public class TicketInfo extends AppCompatActivity
         } else if (id == R.id.mapa) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new MapaFragment()).commit();
         } else if (id == R.id.escanear) {
-            //Borra la entrada guardada
-            SharedPreferences.Editor entrada_escaneada = getSharedPreferences("Entrada", Context.MODE_PRIVATE).edit();
-            entrada_escaneada.putString("codigo", "");
-            entrada_escaneada.commit();
-
             //Lanza el escaneo
             Intent i = new Intent(TicketInfo.this, QRScanner.class);
             startActivity(i);
 
         } else if (id == R.id.ayuda) {
-
             menuDialog.show();
             return true;
         }

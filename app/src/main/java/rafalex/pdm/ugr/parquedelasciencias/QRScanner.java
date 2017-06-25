@@ -109,6 +109,11 @@ public class QRScanner extends AppCompatActivity {
                             //Guarda la entrada escaneada
                             SharedPreferences.Editor entrada_escaneada = getSharedPreferences("Entrada", Context.MODE_PRIVATE).edit();
                             entrada_escaneada.putString("codigo", value);
+                            entrada_escaneada.putBoolean("alarma_biodomo", false);
+                            entrada_escaneada.putBoolean("alarma_planetario", false);
+                            entrada_escaneada.putBoolean("alarma_torre", false);
+                            entrada_escaneada.putBoolean("alarma_aves", false);
+                            entrada_escaneada.putBoolean("alarma_mariposario", false);
                             entrada_escaneada.commit();
 
                             //Lanza la actividad limpiando las anteriores

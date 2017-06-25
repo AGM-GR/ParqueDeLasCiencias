@@ -76,7 +76,7 @@
                 android:id="@+id/alarma_planetario"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_alarm_off"/>
+                android:src="@drawable/ic_alarm_add"/>
         </LinearLayout>
 
         <LinearLayout
@@ -114,7 +114,7 @@
                 android:id="@+id/alarma_biodomo"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_alarm_off"/>
+                android:src="@drawable/ic_alarm_add"/>
         </LinearLayout>
 
         <LinearLayout
@@ -162,7 +162,7 @@
                 android:id="@+id/alarma_torre"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_alarm_off"/>
+                android:src="@drawable/ic_alarm_add"/>
         </LinearLayout>
 
         <LinearLayout
@@ -210,7 +210,7 @@
                 android:id="@+id/alarma_aves"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_alarm_off"/>
+                android:src="@drawable/ic_alarm_add"/>
         </LinearLayout>
 
         <LinearLayout
@@ -247,7 +247,7 @@
                 android:id="@+id/alarma_mariposas"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_alarm_off"/>
+                android:src="@drawable/ic_alarm_add"/>
         </LinearLayout>
 
     </LinearLayout>
