@@ -117,19 +117,14 @@ public class TicketInfo extends AppCompatActivity
         super.onResume();
 
         qrString = getIntent().getExtras().getString("QRResult");
-        String[] horarios = qrString.split("[-]+");
-        fecha = horarios[0];
-        biodomo = horarios[1];
-        planetario = horarios[2];
-        //text.setText(R.string.fecha_entrada + ": " + fecha + " Biodomo: " + biodomo + " " + R.string.planetario + ": " + planetario);
-
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.contenedor, new InformacionGeneralFragment()).commit();
 
         //Guarda la entrada escaneada
         SharedPreferences.Editor entrada_escaneada = getSharedPreferences("Entrada", Context.MODE_PRIVATE).edit();
         entrada_escaneada.putString("codigo", qrString);
         entrada_escaneada.commit();
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.contenedor, new InformacionGeneralFragment()).commit();
     }
 
 }
