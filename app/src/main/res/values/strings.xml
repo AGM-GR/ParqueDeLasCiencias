@@ -48,4 +48,9 @@
     <string name="qr">Scan ticket</string>
     <string name="horatioytarifa">Timetables and prices</string>
 
+    <string name="comprobacion">Are you sure?</string>
+    <string name="si">Yes</string>
+    <string name="no">No</string>
+    <string name="borrar">Delete ticket</string>
+
 </resources>

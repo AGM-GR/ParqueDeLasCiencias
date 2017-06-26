@@ -1,8 +1,11 @@
 package rafalex.pdm.ugr.parquedelasciencias;
 
 import android.app.AlarmManager;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.PendingIntent;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -28,10 +31,14 @@ public class InformacionGeneralFragment extends Fragment {
     TextView horaBiodomo;
     ImageView imagenAlarmaBiodomo;
 
+    Bundle saved;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        this.saved = savedInstanceState;
 
         //Obtiene los datos guardados
         SharedPreferences entrada_escaneada = getContext().getSharedPreferences("Entrada", Context.MODE_PRIVATE);
@@ -80,11 +87,7 @@ public class InformacionGeneralFragment extends Fragment {
         else
             imagenAlarmaPlanetario.setImageResource(R.drawable.ic_alarm_off);
 
-
-
-
-
-        Button boton =  (Button)informacionGeneral.findViewById(R.id.botonAlarma);
+        Button boton =  (Button)informacionGeneral.findViewById(R.id.eliminarEntrada);
 
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,22 +109,44 @@ public class InformacionGeneralFragment extends Fragment {
 
                 //aMan.cancel(pIntent);
 
-                //Borra la entrada escaneada
-                SharedPreferences.Editor entrada_escaneada = getActivity().getSharedPreferences("Entrada", Context.MODE_PRIVATE).edit();
-                entrada_escaneada.putString("codigo", "");
-                entrada_escaneada.putBoolean("alarma_biodomo", false);
-                entrada_escaneada.putBoolean("alarma_planetario", false);
-                entrada_escaneada.putBoolean("alarma_torre", false);
-                entrada_escaneada.putBoolean("alarma_aves", false);
-                entrada_escaneada.putBoolean("alarma_mariposario", false);
-                entrada_escaneada.commit();
 
-                Intent i = new Intent(getActivity(), MainActivity.class);
-                getActivity().startActivity(i);
+                onCreateDialog(saved).show();
+
+
+
             }
         });
 
         return informacionGeneral;
+    }
+
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+        // Use the Builder class for convenient dialog construction
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setMessage(R.string.comprobacion)
+                .setPositiveButton(R.string.si, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        //Borra la entrada escaneada
+                        SharedPreferences.Editor entrada_escaneada = getActivity().getSharedPreferences("Entrada", Context.MODE_PRIVATE).edit();
+                        entrada_escaneada.putString("codigo", "");
+                        entrada_escaneada.putBoolean("alarma_biodomo", false);
+                        entrada_escaneada.putBoolean("alarma_planetario", false);
+                        entrada_escaneada.putBoolean("alarma_torre", false);
+                        entrada_escaneada.putBoolean("alarma_aves", false);
+                        entrada_escaneada.putBoolean("alarma_mariposario", false);
+                        entrada_escaneada.commit();
+
+                        Intent i = new Intent(getActivity(), MainActivity.class);
+                        getActivity().startActivity(i);
+                    }
+                })
+                .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // User cancelled the dialog
+                    }
+                });
+        // Create the AlertDialog object and return it
+        return builder.create();
     }
 
 }

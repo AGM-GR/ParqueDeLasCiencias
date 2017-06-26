@@ -48,4 +48,9 @@
     <string name="qr">Escanear entrada</string>
     <string name="horatioytarifa">Horarios y tarifas</string>
 
+    <string name="comprobacion">¿Estás seguro?</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
+    <string name="borrar">Borrar entrada</string>
+
 </resources>
