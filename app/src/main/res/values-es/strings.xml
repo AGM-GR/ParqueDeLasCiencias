@@ -41,4 +41,11 @@
     <string name="wow_des">WOW ofrece una visión original de la vida animal con escenas panorámicas de gran belleza, cargadas al mismo tiempo de dramatismo y armonía, como si hubiéramos congelado la vida real. Conocer estas maravillas debe ayudarnos a impulsar su conservación en la naturaleza cada vez más amenazada.</string>
     <string name="celula_madre_des">La gran esperanza terapéutica del siglo XXI. Esta ha sido la carta de presentación en sociedad de las células madre, desde que en 1974 un grupo de científicos descubrieran células madre hematopoyéticas en el cordón umbilical. Su capacidad para dividirse indefinidamente sin perder sus propiedades y llegar a producir células especializadas las han convertido en uno de los principales ejes de la investigación biomédica actual y en un campo científico de gran interés para la sociedad.</string>
 
+    <string name="info">Información</string>
+    <string name="expo">Exposiciones temporales</string>
+    <string name="horario">Horarios</string>
+    <string name="mapa">Mapas</string>
+    <string name="qr">Escanear entrada</string>
+    <string name="horatioytarifa">Horarios y tarifas</string>
+
 </resources>
