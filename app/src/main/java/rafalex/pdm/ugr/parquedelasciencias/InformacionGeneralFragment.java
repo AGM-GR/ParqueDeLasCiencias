@@ -5,7 +5,6 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -91,7 +90,7 @@ public class InformacionGeneralFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                Intent intentoLanzar = new Intent(getActivity(), Temporizador.class);
+                /*Intent intentoLanzar = new Intent(getActivity(), Temporizador.class);
                 intentoLanzar.putExtra("Titulo", "Biodomo");
                 intentoLanzar.putExtra("Hora", "10:20");
                 PendingIntent pIntent = PendingIntent.getBroadcast(getActivity(), 0, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
@@ -102,10 +101,23 @@ public class InformacionGeneralFragment extends Fragment {
                 cal.set(Calendar.HOUR_OF_DAY, timePicker.getCurrentHour());
                 cal.set(Calendar.MINUTE, timePicker.getCurrentMinute());
                 cal.set(Calendar.SECOND, 0);*/
-                AlarmManager aMan = (AlarmManager)getActivity().getSystemService(getActivity().ALARM_SERVICE);
-                aMan.setExact(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pIntent);
+                /*AlarmManager aMan = (AlarmManager)getActivity().getSystemService(getActivity().ALARM_SERVICE);
+                aMan.setExact(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pIntent);*/
 
                 //aMan.cancel(pIntent);
+
+                //Borra la entrada escaneada
+                SharedPreferences.Editor entrada_escaneada = getActivity().getSharedPreferences("Entrada", Context.MODE_PRIVATE).edit();
+                entrada_escaneada.putString("codigo", "");
+                entrada_escaneada.putBoolean("alarma_biodomo", false);
+                entrada_escaneada.putBoolean("alarma_planetario", false);
+                entrada_escaneada.putBoolean("alarma_torre", false);
+                entrada_escaneada.putBoolean("alarma_aves", false);
+                entrada_escaneada.putBoolean("alarma_mariposario", false);
+                entrada_escaneada.commit();
+
+                Intent i = new Intent(getActivity(), MainActivity.class);
+                getActivity().startActivity(i);
             }
         });
 
