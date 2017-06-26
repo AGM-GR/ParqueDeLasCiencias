@@ -102,9 +102,9 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/botonAlarma"
+            android:id="@+id/eliminarEntrada"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="alarma"/>
+            android:text="@string/borrar"/>
     </LinearLayout>
 </ScrollView>

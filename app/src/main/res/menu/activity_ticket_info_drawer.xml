@@ -5,30 +5,30 @@
         <item
             android:id="@+id/info"
             android:icon="@drawable/ic_info"
-            android:title="Información"
+            android:title="@string/info"
             android:checked="true"/>
         <item
             android:id="@+id/expo"
             android:icon="@drawable/ic_hourglass"
-            android:title="Exposiciones temporales" />
+            android:title="@string/expo" />
         <item
             android:id="@+id/horarios"
             android:icon="@drawable/ic_timetables"
-            android:title="Horarios" />
+            android:title="@string/horario" />
         <item
             android:id="@+id/mapa"
             android:icon="@drawable/ic_map"
-            android:title="Mapas" />
+            android:title="@string/mapa" />
 
         <item
             android:id="@+id/escanear"
             android:icon="@drawable/ic_qr"
-            android:title="Escanear entrada" />
+            android:title="@string/qr" />
     </group>
 
     <item
         android:id="@+id/ayuda"
         android:icon="@drawable/ic_help"
-        android:title="Ayuda" />
+        android:title="@string/menu_help" />
 
 </menu>

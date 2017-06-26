@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.expo) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new ExposicionesTemporalesFragment()).commit();
         } else if (id == R.id.horarios) {
-            fragmentManager.beginTransaction().replace(R.id.contenedor, new HorariosFragment()).commit();
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new HorariosTarifasFragment()).commit();
         } else if (id == R.id.mapa) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new MapaFragment()).commit();
         } else if (id == R.id.escanear) {

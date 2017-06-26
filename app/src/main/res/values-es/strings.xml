@@ -16,6 +16,8 @@
     <string name="ave">Aves</string>
     <string name="mariposa">Mariposario</string>
 
+    <string name="tarifa">Precio</string>
+
     <string name="ayuda">Aplicación destinada a mejorar la experiencia que ofrece el Parque de las Ciencias. Aquí podrás escanear tu entrada,
                          ver mapas del parque, horario de las actividades, actividades temporales que ofrece el parque y activar alarmas que te
                          avisarán de que se aproxima la hora de entrada al planetario o biodomo.</string>
@@ -38,5 +40,17 @@
     <string name="robots_des">Se trata de una coproducción internacional entre el Museo federal de la Industria y el Trabajo de Alemania (DASA) y el Parque de las Ciencias, que aborda un tema de enorme calado y actualidad con grandes implicaciones en campos que van desde la vida cotidiana a la economía mundial, la industria, la investigación, el transporte o la salud.</string>
     <string name="wow_des">WOW ofrece una visión original de la vida animal con escenas panorámicas de gran belleza, cargadas al mismo tiempo de dramatismo y armonía, como si hubiéramos congelado la vida real. Conocer estas maravillas debe ayudarnos a impulsar su conservación en la naturaleza cada vez más amenazada.</string>
     <string name="celula_madre_des">La gran esperanza terapéutica del siglo XXI. Esta ha sido la carta de presentación en sociedad de las células madre, desde que en 1974 un grupo de científicos descubrieran células madre hematopoyéticas en el cordón umbilical. Su capacidad para dividirse indefinidamente sin perder sus propiedades y llegar a producir células especializadas las han convertido en uno de los principales ejes de la investigación biomédica actual y en un campo científico de gran interés para la sociedad.</string>
+
+    <string name="info">Información</string>
+    <string name="expo">Exposiciones temporales</string>
+    <string name="horario">Horarios</string>
+    <string name="mapa">Mapas</string>
+    <string name="qr">Escanear entrada</string>
+    <string name="horatioytarifa">Horarios y tarifas</string>
+
+    <string name="comprobacion">¿Estás seguro?</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
+    <string name="borrar">Borrar entrada</string>
 
 </resources>
