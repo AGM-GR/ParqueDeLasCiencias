@@ -16,6 +16,8 @@
     <string name="ave">Aves</string>
     <string name="mariposa">Mariposario</string>
 
+    <string name="tarifa">Precio</string>
+
     <string name="ayuda">Aplicación destinada a mejorar la experiencia que ofrece el Parque de las Ciencias. Aquí podrás escanear tu entrada,
                          ver mapas del parque, horario de las actividades, actividades temporales que ofrece el parque y activar alarmas que te
                          avisarán de que se aproxima la hora de entrada al planetario o biodomo.</string>

@@ -24,7 +24,6 @@
             </intent-filter>
             android:screenOrientation="portrait"
         </activity>
-        <activity android:name=".EscanearQRFragment" />
         <activity
             android:name=".QRScanner"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -46,8 +45,9 @@
 
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:label="@string/title_activity_ticket_info"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
