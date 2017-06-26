@@ -1,5 +1,7 @@
 package rafalex.pdm.ugr.parquedelasciencias;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -9,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import java.util.Calendar;
 
 public class Alarma extends AppCompatActivity {
 
@@ -45,9 +48,23 @@ public class Alarma extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
+        //Establece los elementos de la vista
         titulo.setText(getIntent().getExtras().getString("Titulo"));
-        hora.setText(getIntent().getExtras().getString("Hora"));
+        String horaText = getIntent().getExtras().getString("Hora");
+        if (horaText.equals("")) {
+            Calendar cal = Calendar.getInstance();
+            cal.setTimeInMillis(System.currentTimeMillis());
+            horaText = cal.getTime().getHours() + ":" + cal.getTime().getMinutes();
+        }
+        hora.setText(horaText);
 
+        //Limpia el valor de la alarma
+        String keyAlarma = getIntent().getExtras().getString("Alarma");
+        SharedPreferences.Editor editor_entrada = getSharedPreferences("Entrada", Context.MODE_PRIVATE).edit();
+        editor_entrada.putBoolean(keyAlarma, false);
+        editor_entrada.commit();
+
+        //Activa la vibración y el sonido
         vib.vibrate(patron,3);
         Uri alarma = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
         ringtone = RingtoneManager.getRingtone(getApplicationContext(), alarma);
