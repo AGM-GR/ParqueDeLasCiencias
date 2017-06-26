@@ -24,7 +24,7 @@
             </intent-filter>
             android:screenOrientation="portrait"
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".EscanearQRFragment" />
         <activity
             android:name=".QRScanner"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -34,13 +34,20 @@
         <activity
             android:name=".TicketInfo"
             android:label="@string/title_activity_ticket_info"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Alarma"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Alarma"
+            android:screenOrientation="portrait" />
+
         <receiver
             android:name=".Temporizador"
             android:process=":remote" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -38,5 +38,8 @@
     <string name="robots_des">It is an international co-production between the Federal Ministry of Industry and Labor of Germany (DASA) and the Science Park, which tackles a huge and current topic with great implications in fields ranging from daily life to World economy, industry, research, transport or health.</string>
     <string name="wow_des">WOW offers an original vision of animal life with panoramic scenes of great beauty, loaded at the same time with drama and harmony, as if we had frozen the real life. Knowing these wonders must help us to promote their conservation in the increasingly threatened nature.</string>
     <string name="celula_madre_des">The great therapeutic hope of the 21st century. This has been the letter of introduction of stem cells, since in 1974 a group of scientists discovered hematopoietic stem cells in the umbilical cord. Their ability to divide indefinitely without losing their properties and to produce specialized cells have made them one of the main axes of current biomedical research and a scientific field of great interest to society.</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="action_settings">Settings</string>
 
 </resources>

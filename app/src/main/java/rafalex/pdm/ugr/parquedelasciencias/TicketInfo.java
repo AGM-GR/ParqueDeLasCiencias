@@ -20,8 +20,6 @@ import android.widget.TextView;
 public class TicketInfo extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    TextView text;
-
     private AlertDialog menuDialog;
     private AlertDialog.Builder helpDialog;
 
@@ -40,8 +38,6 @@ public class TicketInfo extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        text = (TextView) findViewById(R.id.qrText);
 
         //Crea los dialogos
         LayoutInflater inflater = this.getLayoutInflater();
