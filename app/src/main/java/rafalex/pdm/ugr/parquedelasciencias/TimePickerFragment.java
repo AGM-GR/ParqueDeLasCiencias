@@ -2,13 +2,14 @@ package rafalex.pdm.ugr.parquedelasciencias;
 
 import android.app.TimePickerDialog;
 import android.content.Context;
+import android.util.Log;
 import android.widget.TimePicker;
 import java.lang.reflect.Field;
 import java.text.DateFormat;
 import java.util.Calendar;
 
 
-public class TimePickerFragment extends TimePickerDialog{
+public class TimePickerFragment extends TimePickerDialog {
 
     private int minHour = -1;
     private int minMinute = -1;
@@ -28,7 +29,7 @@ public class TimePickerFragment extends TimePickerDialog{
         currentMinute = minute;
         dateFormat = DateFormat.getTimeInstance(DateFormat.SHORT);
 
-        try {
+        /*try {
             Class<?> superclass = getClass().getSuperclass();
             Field mTimePickerField = superclass.getDeclaredField("mTimePicker");
             mTimePickerField.setAccessible(true);
@@ -37,7 +38,7 @@ public class TimePickerFragment extends TimePickerDialog{
         } catch (NoSuchFieldException e) {
         } catch (IllegalArgumentException e) {
         } catch (IllegalAccessException e) {
-        }
+        }*/
     }
 
     public void setMin(int hour, int minute) {
@@ -62,13 +63,12 @@ public class TimePickerFragment extends TimePickerDialog{
             validTime = false;
         }
 
-        if (validTime) {
+        if (validTime)
             currentHour = hourOfDay;
             currentMinute = minute;
-        }
 
-        updateTime(currentHour, currentMinute);
         updateDialogTitle(view, currentHour, currentMinute);
+        updateTime(currentHour, currentMinute);
     }
 
     private void updateDialogTitle(TimePicker timePicker, int hourOfDay, int minute) {
