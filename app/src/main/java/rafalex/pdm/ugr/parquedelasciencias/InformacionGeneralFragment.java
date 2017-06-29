@@ -93,27 +93,7 @@ public class InformacionGeneralFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                /*Intent intentoLanzar = new Intent(getActivity(), Temporizador.class);
-                intentoLanzar.putExtra("Titulo", "Biodomo");
-                intentoLanzar.putExtra("Hora", "10:20");
-                PendingIntent pIntent = PendingIntent.getBroadcast(getActivity(), 0, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
-                Calendar cal = Calendar.getInstance();
-                cal.setTimeInMillis(System.currentTimeMillis()+4000);
-                ((Button)v).setText("Hora: " + cal.getTime());
-                /*TimePicker timePicker = new TimePicker();
-                cal.set(Calendar.HOUR_OF_DAY, timePicker.getCurrentHour());
-                cal.set(Calendar.MINUTE, timePicker.getCurrentMinute());
-                cal.set(Calendar.SECOND, 0);*/
-                /*AlarmManager aMan = (AlarmManager)getActivity().getSystemService(getActivity().ALARM_SERVICE);
-                aMan.setExact(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pIntent);*/
-
-                //aMan.cancel(pIntent);
-
-
                 onCreateDialog(saved).show();
-
-
-
             }
         });
 
@@ -137,6 +117,7 @@ public class InformacionGeneralFragment extends Fragment {
                         entrada_escaneada.commit();
 
                         Intent i = new Intent(getActivity(), MainActivity.class);
+                        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         getActivity().startActivity(i);
                     }
                 })
