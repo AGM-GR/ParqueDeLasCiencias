@@ -119,6 +119,7 @@ public class InformacionGeneralFragment extends Fragment {
                         Intent i = new Intent(getActivity(), MainActivity.class);
                         i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         getActivity().startActivity(i);
+                        getActivity().finish();
                     }
                 })
                 .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
