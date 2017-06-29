@@ -183,7 +183,7 @@ public class HorariosFragment extends Fragment {
                                 intentoLanzar.putExtra("Titulo", getResources().getString(R.string.biodomo));
                                 intentoLanzar.putExtra("Hora", horaEntradaBiodomo);
                                 intentoLanzar.putExtra("Alarma", "alarma_biodomo");
-                                PendingIntent pIntent = PendingIntent.getBroadcast(getActivity(), 0, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
+                                PendingIntent pIntent = PendingIntent.getBroadcast(getActivity(), 1, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
                                 Calendar cal = Calendar.getInstance();
                                 cal.setTimeInMillis(System.currentTimeMillis());
                                 cal.set(Calendar.HOUR_OF_DAY, timePicker.getCurrentHour());
@@ -215,7 +215,7 @@ public class HorariosFragment extends Fragment {
                         intentoLanzar.putExtra("Titulo", getResources().getString(R.string.biodomo));
                         intentoLanzar.putExtra("Hora", horaEntradaBiodomo);
                         intentoLanzar.putExtra("Alarma", "alarma_biodomo");
-                        PendingIntent pIntent = PendingIntent.getBroadcast(getActivity(), 0, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
+                        PendingIntent pIntent = PendingIntent.getBroadcast(getActivity(), 1, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
                         AlarmManager aMan = (AlarmManager) getActivity().getSystemService(getActivity().ALARM_SERVICE);
                         aMan.cancel(pIntent);
 
@@ -250,7 +250,7 @@ public class HorariosFragment extends Fragment {
                             intentoLanzar.putExtra("Titulo", getResources().getString(R.string.torre));
                             intentoLanzar.putExtra("Hora", "");
                             intentoLanzar.putExtra("Alarma", "alarma_torre");
-                            PendingIntent pIntent = PendingIntent.getBroadcast(getActivity(), 0, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
+                            PendingIntent pIntent = PendingIntent.getBroadcast(getActivity(), 2, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
                             Calendar cal = Calendar.getInstance();
                             cal.setTimeInMillis(System.currentTimeMillis());
                             cal.set(Calendar.HOUR_OF_DAY, timePicker.getCurrentHour());
@@ -282,7 +282,7 @@ public class HorariosFragment extends Fragment {
                     intentoLanzar.putExtra("Titulo", getResources().getString(R.string.torre));
                     intentoLanzar.putExtra("Hora", "");
                     intentoLanzar.putExtra("Alarma", "alarma_torre");
-                    PendingIntent pIntent = PendingIntent.getBroadcast(getActivity(), 0, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
+                    PendingIntent pIntent = PendingIntent.getBroadcast(getActivity(), 2, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
                     AlarmManager aMan = (AlarmManager) getActivity().getSystemService(getActivity().ALARM_SERVICE);
                     aMan.cancel(pIntent);
 
@@ -316,7 +316,7 @@ public class HorariosFragment extends Fragment {
                             intentoLanzar.putExtra("Titulo", getResources().getString(R.string.ave));
                             intentoLanzar.putExtra("Hora", "");
                             intentoLanzar.putExtra("Alarma", "alarma_aves");
-                            PendingIntent pIntent = PendingIntent.getBroadcast(getActivity(), 0, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
+                            PendingIntent pIntent = PendingIntent.getBroadcast(getActivity(), 3, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
                             Calendar cal = Calendar.getInstance();
                             cal.setTimeInMillis(System.currentTimeMillis());
                             cal.set(Calendar.HOUR_OF_DAY, timePicker.getCurrentHour());
@@ -348,7 +348,7 @@ public class HorariosFragment extends Fragment {
                     intentoLanzar.putExtra("Titulo", getResources().getString(R.string.ave));
                     intentoLanzar.putExtra("Hora", "");
                     intentoLanzar.putExtra("Alarma", "alarma_aves");
-                    PendingIntent pIntent = PendingIntent.getBroadcast(getActivity(), 0, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
+                    PendingIntent pIntent = PendingIntent.getBroadcast(getActivity(), 3, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
                     AlarmManager aMan = (AlarmManager) getActivity().getSystemService(getActivity().ALARM_SERVICE);
                     aMan.cancel(pIntent);
 
@@ -382,7 +382,7 @@ public class HorariosFragment extends Fragment {
                             intentoLanzar.putExtra("Titulo", getResources().getString(R.string.mariposa));
                             intentoLanzar.putExtra("Hora", "");
                             intentoLanzar.putExtra("Alarma", "alarma_mariposario");
-                            PendingIntent pIntent = PendingIntent.getBroadcast(getActivity(), 0, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
+                            PendingIntent pIntent = PendingIntent.getBroadcast(getActivity(), 4, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
                             Calendar cal = Calendar.getInstance();
                             cal.setTimeInMillis(System.currentTimeMillis());
                             cal.set(Calendar.HOUR_OF_DAY, timePicker.getCurrentHour());
@@ -414,7 +414,7 @@ public class HorariosFragment extends Fragment {
                     intentoLanzar.putExtra("Titulo", getResources().getString(R.string.mariposa));
                     intentoLanzar.putExtra("Hora", "");
                     intentoLanzar.putExtra("Alarma", "alarma_mariposario");
-                    PendingIntent pIntent = PendingIntent.getBroadcast(getActivity(), 0, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
+                    PendingIntent pIntent = PendingIntent.getBroadcast(getActivity(), 4, intentoLanzar, PendingIntent.FLAG_UPDATE_CURRENT);
                     AlarmManager aMan = (AlarmManager) getActivity().getSystemService(getActivity().ALARM_SERVICE);
                     aMan.cancel(pIntent);
 
