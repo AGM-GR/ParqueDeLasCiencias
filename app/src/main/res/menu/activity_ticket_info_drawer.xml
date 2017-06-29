@@ -8,13 +8,13 @@
             android:title="@string/info"
             android:checked="true"/>
         <item
-            android:id="@+id/expo"
-            android:icon="@drawable/ic_hourglass"
-            android:title="@string/expo" />
-        <item
             android:id="@+id/horarios"
             android:icon="@drawable/ic_timetables"
             android:title="@string/horario" />
+        <item
+            android:id="@+id/expo"
+            android:icon="@drawable/ic_hourglass"
+            android:title="@string/expo" />
         <item
             android:id="@+id/mapa"
             android:icon="@drawable/ic_map"
