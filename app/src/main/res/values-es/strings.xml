@@ -53,4 +53,8 @@
     <string name="no">No</string>
     <string name="borrar">Borrar entrada</string>
 
+    <string name="ha_pasado">La entrada ha caducado</string>
+    <string name="aun_no">Aun no ha llegado el día</string>
+    <string name="es_hoy">Es hoy</string>
+
 </resources>

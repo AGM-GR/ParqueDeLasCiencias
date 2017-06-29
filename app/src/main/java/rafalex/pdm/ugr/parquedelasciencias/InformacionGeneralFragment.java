@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,6 +66,52 @@ public class InformacionGeneralFragment extends Fragment {
 
         //Muestra las vistas dependiendo de si están disponibles
         fechaEntrada.setText(fecha);
+
+        String[] fechas_split = fecha.split("[/]+");
+        int dia = Integer.parseInt(fechas_split[0]);
+        int mes = Integer.parseInt(fechas_split[1]);
+        int ano = Integer.parseInt(fechas_split[2]);
+
+        Calendar cal = Calendar.getInstance();
+        cal.setTimeInMillis(System.currentTimeMillis());
+        int dia_hoy = cal.get(Calendar.DAY_OF_MONTH);
+        int mes_hoy = cal.get(Calendar.MONTH) + 1;
+        int ano_hoy = cal.get(Calendar.YEAR);
+
+        if(ano < ano_hoy) {
+            //La fecha ya ha pasado
+            estadoEntrada.setText(getResources().getString(R.string.ha_pasado));
+        } else {
+            if (ano > ano_hoy){
+                //La fecha aun no ha llegado
+                estadoEntrada.setText(getResources().getString(R.string.aun_no));
+            } else {
+                if(mes < mes_hoy){
+                    //La fecha ha pasado
+                    estadoEntrada.setText(getResources().getString(R.string.ha_pasado));
+                } else {
+                    if (mes > mes_hoy){
+                        //La fecha aun no ha llegado
+                        estadoEntrada.setText(getResources().getString(R.string.aun_no));
+                    }
+                    else {
+                        if (dia < dia_hoy) {
+                            //La fecha ha pasado
+                            estadoEntrada.setText(getResources().getString(R.string.ha_pasado));
+                        } else {
+                            if(dia > dia_hoy) {
+                                //La fecha no ha llegado
+                                estadoEntrada.setText(getResources().getString(R.string.aun_no));
+                            } else {
+                                //Es hoy
+                                estadoEntrada.setText(getResources().getString(R.string.es_hoy));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         if (!planetario.contains("_")) {
             layoutPlanetario.setVisibility(View.VISIBLE);
             horaPlanetario.setText(planetario);

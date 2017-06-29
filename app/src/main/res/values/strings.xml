@@ -53,4 +53,8 @@
     <string name="no">No</string>
     <string name="borrar">Delete ticket</string>
 
+    <string name="ha_pasado">The ticket has expired</string>
+    <string name="aun_no">The day has not yet come</string>
+    <string name="es_hoy">Is today</string>
+
 </resources>
