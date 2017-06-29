@@ -2,8 +2,6 @@ package rafalex.pdm.ugr.parquedelasciencias;
 
 
 import android.app.AlarmManager;
-import android.app.DialogFragment;
-import android.app.FragmentManager;
 import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.Context;
